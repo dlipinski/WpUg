@@ -1,0 +1,16 @@
+ul{
+    list-style-type: number;
+    color: red;
+}
+
+ul ul{
+    list-style-type: lower-alpha;
+    color: green;
+}
+
+ul ul ul{
+    list-style-type: disc;
+    color: blue;
+}
+
+
