@@ -1,0 +1,27 @@
+body{
+    background: grey;
+}
+div#menu{
+    width:100%;
+    text-align: center;
+    border: 1px solid black;
+    background: lightgray;
+    padding: 10px;
+}
+span.el_menu{
+    margin-left:10px;
+    border: 1px solid black;
+    padding: 0px 5px 0px 5px;
+}
+
+span.el_menu :link{
+    color: darkred;
+}
+
+span.el_menu :hover{
+    color: white;
+}
+
+span.el_menu :visited{
+    color: black;
+}

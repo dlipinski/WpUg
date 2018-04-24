@@ -1,0 +1,13 @@
+body{
+    background: lightgray;
+}
+div#menu{
+    width:100%;
+    text-align: center;
+    border: 1px solid black;
+    background: white;
+}
+span.el_menu{
+    margin-left:10px;
+}
+
