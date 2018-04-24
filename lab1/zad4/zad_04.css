@@ -1,0 +1,30 @@
+body {
+}
+div.adres {
+    margin-left: auto;
+    margin-right: auto;
+    width: 12em;
+    border: 4px solid black;
+    background: yellow;
+    padding: 10px;
+    margin-bottom:10px;
+}
+span.nazwisko {
+    display: block;
+    font-weight: bold;
+    border-bottom: thin solid blue;
+    border-top: thin solid blue;
+    color: blue;
+}
+span.ulica {
+    display: block;
+    color: green;
+}
+span.kod {
+    color: red;
+}
+span.miejscowosc {
+}
+span.telefon {
+    display: block;
+}
