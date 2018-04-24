@@ -1,8 +1,7 @@
 /* jshint strict: global, esversion: 6, devel: true, node: true */
 'use strict';
 
-var x=4;
-console.log(x.typess);
+
 
 const defFun = (fun, types) => {
     

@@ -21,7 +21,7 @@ try {
 
 
 
-console.log(myFun);
+
 
 const appFun = (f, args) => {
     return 1;
