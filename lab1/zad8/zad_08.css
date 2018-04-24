@@ -1,0 +1,27 @@
+div {
+    display: inline-block;
+}
+
+div.C {
+    background: lightcoral;
+    border: solid 2px red;
+    text-align: center;
+    height: 40px;
+    width: 400px;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+div.A, div.B {
+    position: relative;
+    margin-left: 20px;
+}
+
+div.A {
+    top: 5px;
+}
+
+div.B {
+    bottom: 5px;
+}
