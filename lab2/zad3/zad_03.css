@@ -1,0 +1,21 @@
+body {
+  background: lightgray;
+  display: flex;
+}
+div {
+  display: inline-block;
+}
+div#menu {
+  width: 20%;
+  text-align: center;
+  border-right: 5px solid black;
+  padding-top: 30px;
+}
+div#menu span {
+  padding: 5px;
+  display: block;
+}
+div#tresc {
+  padding: 20px;
+  width: 80%;
+}
