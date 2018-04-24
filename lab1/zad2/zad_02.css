@@ -1,0 +1,12 @@
+.tresc{
+    width:60%;
+    padding: 10px;
+    background-image: url('papier.gif');
+    border: 1px solid black;
+    text-align: justify;
+    margin: 0 auto;
+}
+
+.tresc p::before {
+    content: '\00a0\00a0';
+}
