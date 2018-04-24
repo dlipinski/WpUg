@@ -1,0 +1,38 @@
+body{
+    background: grey;
+}
+
+div{
+    &#menu{
+        position: fixed;
+        width: 100%;
+        top:0;
+        background: lighten(grey,40%);
+        text-align: center;
+        border-top: 5px solid lightgray; 
+        border-bottom:5px solid black;
+        border-left: 5px solid lightgray;
+        padding: 10px;
+        span{
+            margin-left: 10px;
+            padding: 5px;
+            border-top: 1px solid lightgray;
+            border-right:  1px solid black;;
+            border-bottom:1px solid black;
+            border-left: 1px solid lightgray;
+            &:hover{
+                background:white;
+                border-top: 1px solid black;
+                border-right:  1px solid lightgray;;
+                border-bottom:1px solid lightgray;
+                border-left: 1px solid black;
+            }
+            :visited{
+                background: lightcyan;
+            } 
+            :link{
+                color: darken(red,30%);
+            }
+        }
+    }
+}
