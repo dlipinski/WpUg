@@ -1,0 +1,12 @@
+div{
+    position: relative;
+    display: inline-block;
+}
+
+div .A {
+    top: 5px;
+}
+
+div .B{
+    bottom: 5px;
+}
