@@ -1,0 +1,27 @@
+body{
+    height: 500px;
+}
+div{
+    &#outer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .box{
+            width:100px;
+            height:100px;
+            margin: auto;
+            &:nth-child(1){
+                align-self: flex-start;
+                background: lighten(black, 60%);
+            }
+            &:nth-child(2){
+                max-width:50%;
+                background: lighten(black, 70%);
+            }
+            &:nth-child(3){
+                align-self: flex-end;
+                background: lighten(black, 80%);
+            }
+        }
+    }
+}
