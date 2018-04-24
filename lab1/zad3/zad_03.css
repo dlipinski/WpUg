@@ -1,0 +1,23 @@
+
+body {
+    background-image: url('listki.gif');
+    background-repeat: repeat-y;
+}
+
+.tresc{
+    width: 60%;
+    text-align: justify;
+    padding: 25px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.tresc p img {
+    float:left;
+}
+
+.tresc p::before {
+    content: '\00a0\00a0';
+}
+
+
