@@ -4,7 +4,7 @@
 
 var  kod= [ 1,2,3,4];
 
-var ruch = [ 1,3,6,2];
+var ruch = [ 1,4,3,1];
 
 const ocena = (kod) => {
     return (ruch) => {
@@ -27,8 +27,8 @@ const ocena = (kod) => {
         });
 
         // Find whites and remember position
-        ruch.forEach( (value, index) => {
-            if(kod.includes(value) && !black.includes(index) && !white.includes(index)){
+        kod.forEach( (value, index) => {
+            if(ruch.includes(value) && !black.includes(index) && !white.includes(index)){
                 white.push(index);
                 console.log("White found: " + value);
             }
