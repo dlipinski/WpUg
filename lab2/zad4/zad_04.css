@@ -1,0 +1,44 @@
+body {
+  background: lightgray;
+  display: flex;
+  padding-top: 20px;
+}
+div#menu {
+  width: 20%;
+  text-align: center;
+  padding-top: 30px;
+}
+div#menu span {
+  width: 90%;
+  padding: 5px;
+  display: block;
+  background: #ececec;
+  border-top: 1px solid grey;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid grey;
+}
+div#menu span :link {
+  color: #660000;
+  text-decoration: none;
+}
+div#tresc {
+  padding: 20px;
+  width: 80%;
+  border-left: 5px solid black;
+}
+div#tresc #naglowek,
+div#tresc #stopka {
+  position: fixed;
+  left: 0;
+  width: 50%;
+  padding: 10px;
+  background: grey;
+}
+div#tresc #naglowek {
+  top: 0;
+  border-bottom: 3px solid black;
+}
+div#tresc #stopka {
+  bottom: 0;
+}
