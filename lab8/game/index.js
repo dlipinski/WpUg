@@ -27,7 +27,7 @@ const markAnswer = (req, res) => {
     
     // Check if kod and ruch are equal length
     if (colors.length !== newMarkMove.length){
-        throw ({ typerr: "Arrays are not equal length!" });
+        res.send({"Error": "Colors and Mark not same length!" });
     }
 
     //Init arrays for black and white indexes
@@ -39,7 +39,6 @@ const markAnswer = (req, res) => {
         
         if(value===newMarkMove[index]){
             black.push(index);
-            console.log("Black found: " + value);
         }
     });
 
@@ -47,7 +46,6 @@ const markAnswer = (req, res) => {
     colors.forEach( (value, index) => {
         if(newMarkMove.includes(value) && !black.includes(index) && !white.includes(index)){
             white.push(index);
-            console.log("White found: " + value);
         }
     });
 
@@ -59,4 +57,3 @@ module.exports = {
     newGame,
     markAnswer
 };
-
