@@ -1,0 +1,95 @@
+// out: styl.css, compress: true
+
+div{
+    &#pojemnik{
+        position:fixed;
+        top: 50%;
+        left: 50%;
+        width:300px;
+        height:400px;
+        margin-top: -200px; /*set to a negative number 1/2 of your height*/
+        margin-left: -150px;
+    }
+    &#zawodnik{
+        width: 100%;
+        background: lighten(blue,30%);
+        text-align: center;
+        padding: 20px 0px 20px 0px;
+        border: thin solid grey;
+        margin-bottom: 10px;
+        color: darken(orange,30%);
+        font-size: 20px;
+    }
+    &#wyniki{
+        width:100%;
+        background: lighten(grey,20%);
+        border: thin solid  grey;
+        margin: 0 auto;
+
+
+        span{
+            width:97%;
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 20px;
+            input{
+                display: inline-block;
+                width: 40px;
+                height: 30px;
+                outline: 0;
+                border: 1px solid grey;
+                background: #f2f2f2;
+                text-align: center;
+                font-size: 20px;
+                
+            }
+        }
+    }
+    &#zapisz{
+        width:100%;
+        margin-top:20px;
+    }
+    
+    &#zawodnicy{
+
+        width: 15%;
+        background: #f2f2f2;
+        border-bottom: 1px solid lightgrey;
+        border-right: 2px solid lightgrey;
+        border-top: 1px solid lightgrey;
+
+        ul{
+            width:50%;
+            margin: 0 auto;
+            padding-top:20px;
+            padding-bottom:20px;
+            list-style-type: none;
+            li{
+                text-align: right;
+            }
+        }
+    }
+}
+
+
+
+button{
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+.wynik{
+    
+    width:40%;
+    text-align: center;
+    font-size: 25px;
+    padding:5px 0px 5px 0px;
+    display: block;
+    margin: 10px auto;
+    border: thin solid  grey;
+    background: #f2f2f2;
+    color: darkred;
+}
