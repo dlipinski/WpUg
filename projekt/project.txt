@@ -31,6 +31,6 @@ Micro eBay
     -uzytkownik wystwiajacy nie moze licytowac
 
 7.Od czego zaczac
-    -widoki silnikiem Expess.js
+    -widoki silnikiem Expess.js( HBR [HandleBars])
     
  
