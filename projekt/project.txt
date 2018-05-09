@@ -1,0 +1,36 @@
+Micro eBay
+
+1.Uzytkownicy 
+    -MongoDB 
+    -Mongoose
+    -Passport.js (zarzadzanie ID, uprawnieniami)
+
+2.Licytacja
+    -WebSocket/Socket.io (do przeprowadzeni aukcji, wymiana danych miedzy klientem aukcji a serwerem aukcji)
+    
+[Passport.js Socket.io]
+    -uwierzytelniane w obu, bez podwojnego
+
+3.Komunikacja miedzy uzytkownikami
+    -socket
+    -"backup" (wiadomosci zobaczy jak sie zaloguje albo normalnie)
+    -osoba licytujaca klika "message" w stronie aukcji, osoba wystawiajaca moze jej odpisywac
+
+4.Interfej uzytkownika
+    -responsywny (bez angulara i bootstrapa)
+    -widoki (Express.js)
+
+5.Dodatkowe
+    -platnosci (w node.js)
+    -kategorie produktow
+    -inne
+
+6.Inne
+    -licytacje ograniczone czasowe
+    -kup teraz
+    -uzytkownik wystwiajacy nie moze licytowac
+
+7.Od czego zaczac
+    -widoki silnikiem Expess.js
+    
+ 
