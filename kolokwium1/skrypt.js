@@ -28,117 +28,130 @@ const lista = [
     { no: 26, name: 'Wieża Bajek' }
 ];
 
-function appendScore(){
-    let scores = document.querySelector('#wyniki');
-    var div = document.createElement("div");
-    div.classList.add('wynik');
-    div.innerHTML = '0.0';
-    scores.appendChild(div);
-}
 
-function fillList(){
-    let ul = document.querySelector('#lista');
-    for( let i =0; i< lista.length; i++){
-        var li = document.createElement("li");
-        li.appendChild(document.createTextNode(lista[i].name));
-        li.setAttribute('no',lista[i].no);
-        ul.appendChild(li);
-        lista[i].inputs =[];
-        lista[i].score = 0.0;
+
+    function appendScore(){
+        let scores = document.querySelector('#wyniki');
+        var div = document.createElement("div");
+        div.classList.add('wynik');
+        div.innerHTML = '0.0';
+        scores.appendChild(div);
     }
-}
 
-function count(){
-    let no = document.querySelector('#zawodnik').getAttribute('no');
-    let values = lista[no-1].inputs;
-    let sum = [];
-    for(let i=0;i<3;i++){
-        sum[i]=0;
-        for(let j=0;j<5;j++){
-            if(values[i*5+j] == parseInt(values[i*5+j], 10)){
-                sum[i]+=parseInt(values[i*5+j]);
+    function fillList(){
+        let ul = document.querySelector('#lista');
+        for( let i =0; i< lista.length; i++){
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(lista[i].name));
+            li.setAttribute('no',lista[i].no);
+            ul.appendChild(li);
+            lista[i].inputs =[];
+            lista[i].score = 0.0;
+        }
+    }
+
+
+
+    function count(){
+        let no = document.querySelector('#zawodnik').getAttribute('no');
+        let values = lista[no-1].inputs;
+        let sum = [];
+        for(let i=0;i<3;i++){
+            sum[i]=0;
+            for(let j=0;j<5;j++){
+                if(values[i*5+j] == parseInt(values[i*5+j], 10)){
+                    sum[i]+=parseInt(values[i*5+j]);
+                }
+                
             }
-            
         }
-    }
-    let sum2 = (sum[0]+sum[1]+sum[2])/3;
+        let sum2 = (sum[0]+sum[1]+sum[2])/3;
 
-    document.querySelector('.wynik').innerHTML = Math.round(sum2 * 100) / 100;
+        document.querySelector('.wynik').innerHTML = Math.round(sum2 * 100) / 100;
 
     }
-
-function fillInputs(){
-    let no = document.querySelector('#zawodnik').getAttribute('no');
-    let inputs = document.querySelectorAll('input');
-    let values = lista[no-1].inputs;
-
-    for (let i=0;i<inputs.length;i++){
-        
-        if(values[i] == parseInt(values[i], 10)){
+    function initValues(){
+        let inputs = document.querySelectorAll('input');
+        document.querySelector('#zawodnik').innerHTML = 'Select user';
+        for (let i=0;i<inputs.length;i++){
             
-            inputs[i].value = values[i];
-        }
-        else{
             inputs[i].value = '';
         }
     }
-}
 
-function addListeners () {
-    let inputs = document.querySelectorAll('input');
-    for (let i = 0; i < inputs.length; i++) {
-        inputs[i].addEventListener('focus', function (e) { this.style.background = 'yellow';}, false);
-        inputs[i].addEventListener('focusout', function (e) { this.style.background = '#f2f2f2'; }, false);
-        inputs[i].addEventListener("keypress", function (evt) { 
-            if(this.value.length > 1) {evt.preventDefault();}
-            if (evt.which < 48 || evt.which > 57) {evt.preventDefault(); }
-            if (evt.which === 13)  {this.blur();}   
-            }  ,false);
-        inputs[i].addEventListener('input', function (e) { 
-            let no = document.querySelector('#zawodnik').getAttribute('no');
-            let row = this.parentElement.getAttribute('row');
-            let column;
-            let temp = this.parentElement.children; for (let j=0;j<temp.length;j++) {if (temp[j]==this) {column = j}}
-            let index = ( row * 5 ) + column;
-            lista[no-1].inputs[index]=this.value;
-            count();
-        }, false);
-    }   
-    let spans = document.querySelectorAll('span');
-    for (let i = 0; i < spans.length; i++) {
-        spans[i].addEventListener('click', function (e) {
-            let siblings = this.parentElement.children;
-            for(let i=0;i<siblings.length;i++){
-                if(siblings[i]==this) {
-                    this.setAttribute('row',i);
-                }
+    function fillInputs(){
+        let no = document.querySelector('#zawodnik').getAttribute('no');
+        let inputs = document.querySelectorAll('input');
+        let values = lista[no-1].inputs;
+
+        for (let i=0;i<inputs.length;i++){
+            
+            if(values[i] == parseInt(values[i], 10)){
+                
+                inputs[i].value = values[i];
             }
-             
-            }, false);
-    } 
-
-    let lis = document.querySelectorAll('li');
-    for (let i = 0; i < lis.length; i++) {
-        lis[i].addEventListener('click', function (e) {
-             this.style.background = 'yellow'; document.querySelector('#zawodnik').innerHTML=this.innerHTML; document.querySelector('#zawodnik').setAttribute('no',this.getAttribute('no'));
-             fillInputs();
-             count();
-            }, false);
-    } 
-}
-function numberInputs(){
-    
-}
-
-function initApp(){
-    fillList();
-    appendScore();
-    numberInputs();
-    addListeners();
-}
-
-document.addEventListener('readystatechange', event => {
-    if (event.target.readyState === 'interactive') {
-      initApp();
+            else{
+                inputs[i].value = '';
+            }
+        }
     }
-  });
+
+    function addListeners () {
+        let inputs = document.querySelectorAll('input');
+        for (let i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener('focus', function (e) { this.style.background = 'yellow';}, false);
+            inputs[i].addEventListener('focusout', function (e) { this.style.background = '#f2f2f2'; }, false);
+            inputs[i].addEventListener("keypress", function (evt) { 
+                if(this.value.length > 1) {evt.preventDefault();}
+                if (evt.which < 48 || evt.which > 57) {evt.preventDefault(); }
+                if (evt.which === 13)  {this.blur();}   
+                }  ,false);
+            inputs[i].addEventListener('input', function (e) { 
+                let no = document.querySelector('#zawodnik').getAttribute('no');
+                let row = this.parentElement.getAttribute('row');
+                let column;
+                let temp = this.parentElement.children; for (let j=0;j<temp.length;j++) {if (temp[j]==this) {column = j}}
+                let index = ( row * 5 ) + column;
+                lista[no-1].inputs[index]=this.value;
+                count();
+            }, false);
+        }   
+        let spans = document.querySelectorAll('span');
+        for (let i = 0; i < spans.length; i++) {
+            spans[i].addEventListener('click', function (e) {
+                let siblings = this.parentElement.children;
+                for(let i=0;i<siblings.length;i++){
+                    if(siblings[i]==this) {
+                        this.setAttribute('row',i);
+                    }
+                }
+                
+                }, false);
+        } 
+
+        let lis = document.querySelectorAll('li');
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].addEventListener('click', function (e) {
+                this.style.background = 'yellow'; document.querySelector('#zawodnik').innerHTML=this.innerHTML; document.querySelector('#zawodnik').setAttribute('no',this.getAttribute('no'));
+                fillInputs();
+                count();
+                }, false);
+        } 
+    }
+    function numberInputs(){
+        
+    }
+
+    function initApp(){
+        fillList();
+        appendScore();
+        numberInputs();
+        initValues();
+        addListeners();
+    }
+
+    document.addEventListener('readystatechange', event => {
+        if (event.target.readyState === 'interactive') {
+        initApp();
+        }
+    });
