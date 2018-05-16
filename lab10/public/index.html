@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Prosty klient WebSockets</title>
+  <meta charset="UTF-8">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/skrypt.js"></script>
+</head>
+
+<body>
+  <div>
+    <div id="left" style="position: absolute;">
+      <div id="leftInside1" style="padding:10px;border:1px solid grey; border-radius:10px; width:220px;">
+        Nick: <input id="nick" type="text" placeholder="Your nick"> 
+        <table>
+          <tr>
+            <td> <img id="status" src="img/bullet_red.png" width="35"> </td>
+            <td> <input id="open" type="button" value="Connect"> </td>
+            <td> <input id="close" type="button" value="Disconnect"> </td>
+          </tr>
+        </table>
+      </div>
+      <div id="users" style="padding:10px;border:1px solid grey; border-radius:10px;">
+        <table style="width:100%;">
+          <thead>
+            <tr>
+            <th style="text-align:center;">Users</th>
+          </tr>
+          </thead>
+          <tbody id = "usersTable">
+
+        </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="right" >
+      <div id="rightInside" style="padding:10px;border:1px solid grey; border-radius:10px; width: 310px;margin: 0 auto;">
+        <div><textarea readonly id="message" noresize style="width:300px;height:300px;  resize: none;"></textarea></div>
+        <div><input id="text" style="width:240px;">&nbsp;<input id="send" type="button" value="Send" style="width:50px;"></div>
+      </div>
+    </div>
+  
+  </div>
+</body>
+
+</html>
