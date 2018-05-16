@@ -7,8 +7,34 @@
     <script src='/js/skrypt.js'></script>
   </head>
   <body>
-    <p>
-    Tutaj znajdzie się interfejs użytkownika naszej gry.
-    </p>
+    <div id="container">
+      <div id="newGameDiv">
+        <form id="newGameForm">
+          <table>
+            <thead>
+              <tr>
+                <th>Size</th>
+                <th>Dim</th>
+                <th>Max</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><div><input type="number" min="1" id="size" placeholder="5"/></div></td>
+                <td><div><input type="number" min="1" id="dim"  placeholder="5"/></div></td>
+                <td><div><input type="number" min="1" id="max"  placeholder="0"/></div></td>
+                <td><div><input type="submit" value=">"/></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+      <div id="games">
+        <table id="games">
+          
+        </table>
+      </div>
+    </div>
   </body>
 </html>

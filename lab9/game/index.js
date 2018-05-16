@@ -50,7 +50,7 @@ const markAnswer = (req, res) => {
     });
 
 
-    res.send({ "biale": white.length, "czarne" :  black.length });
+    res.send({ "white": white.length, "black" :  black.length });
 };
 
 module.exports = {
