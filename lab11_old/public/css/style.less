@@ -1,0 +1,91 @@
+div{
+    color: darken(grey,40%);
+    &#left{
+        position: absolute;
+        #leftInside1{
+            padding:10px;
+            border:1px solid grey;
+            border-radius:10px;
+            width:220px;
+        }
+        #users{
+            margin-top:10px;
+            
+            border:1px solid grey;
+            border-radius:10px;
+            table{
+                
+                
+                width:100%;
+                thead{
+                    
+                    th{
+                        padding:10px;
+                        text-align:center;
+                        border-bottom:1px solid grey;
+                    }
+                }
+                tbody{
+                    tr{
+                        width:100%;
+                        td{
+                            width:100%;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+        #right{
+            #rightInside{
+                padding:10px;
+                border:1px solid grey;
+                border-radius:10px;
+                width: 310px;
+                margin: 0 auto;
+                div{
+                    textarea{
+                        &#message{
+                            width:300px;
+                            height:300px;
+                            resize: none;
+                        }
+                    }
+                    input{
+                        &#text{
+                            width:240px;
+                        }
+                        &#send{
+                            width:50px;
+                        }
+                    }
+                }
+            }
+        }
+        &#roomsContainer{
+            position:absolute;
+            right: 0;
+            top:0;
+            margin-top:20px;
+            margin-right:10px;
+            border:1px solid grey;
+            border-radius:10px;
+            
+            #newRoom{
+                padding:10px;
+                border-bottom: 1px solid grey;
+            }
+            #rooms{
+                padding:10px;
+                .room{
+                    text-align:center;
+                    border:1px solid lightcoral;
+                    border-radius:10px;
+                    &:hover{
+                        background: rgb(237, 192, 192);
+                    }
+                }
+            }
+        }
+}

@@ -1,0 +1,74 @@
+div {
+  color: #1a1a1a;
+}
+div#left {
+  position: absolute;
+}
+div#left #leftInside1 {
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  width: 220px;
+}
+div#left #users {
+  margin-top: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+div#left #users table {
+  width: 100%;
+}
+div#left #users table thead th {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid grey;
+}
+div#left #users table tbody tr {
+  width: 100%;
+}
+div#left #users table tbody tr td {
+  width: 100%;
+  text-align: center;
+}
+div #right #rightInside {
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  width: 310px;
+  margin: 0 auto;
+}
+div #right #rightInside div textarea#message {
+  width: 300px;
+  height: 300px;
+  resize: none;
+}
+div #right #rightInside div input#text {
+  width: 240px;
+}
+div #right #rightInside div input#send {
+  width: 50px;
+}
+div#roomsContainer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 20px;
+  margin-right: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+div#roomsContainer #newRoom {
+  padding: 10px;
+  border-bottom: 1px solid grey;
+}
+div#roomsContainer #rooms {
+  padding: 10px;
+}
+div#roomsContainer #rooms .room {
+  text-align: center;
+  border: 1px solid lightcoral;
+  border-radius: 10px;
+}
+div#roomsContainer #rooms .room:hover {
+  background: #edc0c0;
+}

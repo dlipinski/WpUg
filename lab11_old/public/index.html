@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Prosty klient WebSockets</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/skrypt.js"></script>
+</head>
+
+<body>
+  <div>
+   
+    
+    <div id="left">
+      <div id="leftInside1">
+        Nick: <input id="nick" type="text" placeholder="Your nick"> 
+        <table>
+          <tr>
+            <td> <img id="status" src="img/bullet_red.png" width="35"> </td>
+            <td> <input id="open" type="button" value="Connect"> </td>
+            <td> <input id="close" type="button" value="Disconnect"> </td>
+          </tr>
+        </table>
+      </div>
+      <div id="users">
+        <table>
+          <thead>
+            <tr>
+            <th>Users</th>
+          </tr>
+          </thead>
+          <tbody id = "usersTable">
+            <tr><td>No users</td></tr>
+        </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="right" >
+      <div id="rightInside">
+        <div><textarea readonly id="message" noresize></textarea></div>
+        <div><input id="text">&nbsp;<input id="send" type="button" value="Send"></div>
+      </div>
+    </div>
+    <div id="roomsContainer">
+      <div id="newRoom">
+          <input id="room" type="text" placeholder="Room name"> <input id="createRoom" type="button" value="Create">
+      </div>
+      <div id="rooms">
+        <div class="room">Some name</div>
+      </div>
+    </div>
+  
+  </div>
+</body>
+
+</html>

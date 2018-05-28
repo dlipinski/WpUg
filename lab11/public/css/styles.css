@@ -1,0 +1,79 @@
+div#roomsContainer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 20px;
+  margin-right: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+div#roomsContainer #newRoom {
+  padding: 10px;
+  border-bottom: 1px solid grey;
+}
+div#roomsContainer #rooms {
+  padding: 10px;
+}
+div#roomsContainer #rooms .room {
+  margin-top: 5px;
+  text-align: center;
+  border: 1px solid lightcoral;
+  border-radius: 10px;
+}
+div#roomsContainer #rooms .room:hover {
+  background: #edc0c0;
+}
+div#errorContainer {
+  position: absolute;
+  left: 50%;
+}
+div#errorContainer #error {
+  position: relative;
+  left: -50%;
+  padding: 10px;
+  display: inline-block;
+  left: 10;
+  border: 1px solid #fa3a3a;
+  border-radius: 10px;
+  background: #ff7070;
+}
+div#connectionContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 20px;
+  margin-right: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+div#nickContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 80px;
+  margin-right: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+div#terminalContainer {
+  border: 1px solid grey;
+  border-radius: 10px;
+  display: table;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 5px;
+}
+div#terminalContainer textarea#message {
+  width: 300px;
+  height: 300px;
+  resize: none;
+}
+div#terminalContainer input#text {
+  width: 240px;
+}
+div#terminalContainer input#send {
+  width: 50px;
+}
+div#terminalContainer #roomName {
+  text-align: center;
+}

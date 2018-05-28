@@ -1,0 +1,87 @@
+div{
+    &#roomsContainer{
+        position:absolute;
+        right: 0;
+        top:0;
+        margin-top:20px;
+        margin-right:10px;
+        border:1px solid grey;
+        border-radius:10px;
+        
+        #newRoom{
+            padding:10px;
+            border-bottom: 1px solid grey;
+        }
+        #rooms{
+            padding:10px;
+            .room{
+                margin-top: 5px;
+                text-align:center;
+                border:1px solid lightcoral;
+                border-radius:10px;
+                &:hover{
+                    background: rgb(237, 192, 192);
+                }
+                
+            }
+        }
+    }
+    &#errorContainer{
+        position:absolute;
+        left: 50%;
+        #error{
+            position: relative; left: -50%;
+            padding: 10px;
+            display:inline-block;
+            left:10;
+            border:1px solid rgb(250, 58, 58);
+            border-radius:10px;
+            background: rgb(255, 112, 112);
+        }
+    }
+    &#connectionContainer{
+        position:absolute;
+        left: 0;
+        top:0;
+        margin-top:20px;
+        margin-right:10px;
+        border:1px solid grey;
+        border-radius:10px;
+    }
+    &#nickContainer{
+        position:absolute;
+        left: 0;
+        top:0;
+        margin-top:80px;
+        margin-right:10px;
+        border:1px solid grey;
+        border-radius:10px;
+    }
+    &#terminalContainer{
+        border:1px solid grey;
+        border-radius:10px;
+        display: table;
+        margin: 0 auto;
+        margin: 0 auto;
+        margin-top:50px;
+        padding:5px;
+        textarea{
+            &#message{
+                width:300px;
+                height:300px;
+                resize: none;
+            }
+        }
+        input{
+            &#text{
+                width:240px;
+            }
+            &#send{
+                width:50px;
+            }
+        }
+        #roomName{
+            text-align:center;
+        }
+    }
+}
