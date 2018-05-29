@@ -1,0 +1,71 @@
+<!-- views/pages/index.ejs -->
+<% id = auction.id %>
+<% isBuyNow = auction.isBuyNow %>
+<% title = auction.title %>
+<% description = auction.description %>
+<% price = auction.price %>
+<% photo = auction.photo %>
+<% timeToEnd = '3 days' %>
+<% auctioneers = auction.auctioneers %>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../partials/head %>
+        <link href="/css/auctions.css" rel="stylesheet">
+    </head>
+    <body class="bg-light">
+
+        <header>
+            <% include ../partials/header %>
+        </header>
+
+   
+        <main role="main" class="container">
+            <div class="album py-5 bg-light">
+                <div class="container">
+                    <div class="row">
+                         
+                        <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                              <img class="card-img-top"  src="<%= photo %>" alt="Card image cap">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                                <section class="jumbotron text-center">
+                                    <p class="lead text-muted">Current Price</p>
+                                    <% if( isBuyNow ) { %>
+                                        <input style="text-align:center;color:black;" type="number" min="<%= price %>" value="<%= price %>" disabled><br><br>
+                                        <input style="font-size:20px;" type="button" class="btn btn-sm btn-outline-secondary" value="Buy now">
+                                    <% } else { %>
+                                        <p> Bid offers: <%= auctioneers.length %> </p>
+                                        <input style="text-align:center;" type="number" min="<%= price %>" value="<%= price %>"><br><br>
+                                        <input style="font-size:20px;" type="button" class="btn btn-sm btn-outline-secondary" value="Make bid offer">
+                                    <% } %>
+                                    <br><br>
+                                    <a href="#">
+                                        <p >Contact seller</p>
+                                    </a>
+                                        
+                                   
+                                </section>                          
+                        </div>
+                        <div class="col-md-4">
+                            <section class="jumbotron text-center">
+                                <p class="lead text-muted"><%= title %></p>
+                                <p class="jumbotron-heading"><%= description %></p>
+                            </section>                          
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </main>
+          
+        
+        <footer>
+            <% include ../partials/footer %>
+        </footer>
+
+    </body>
+</html>

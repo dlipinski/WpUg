@@ -1,38 +1,34 @@
+    <% id = auction.id %>
     <% isBuyNow = auction.isBuyNow %>
     <% title = auction.title %>
     <% description = auction.description %>
     <% price = auction.price %>
-    <% timeToEnd = '3 days' %>
+    <% photo = auction.photo %>
+    <% timeToEnd = moment(auction.endDate).diff(moment()); %>
 
-    <style>
-    #auctionLink:hover{
-        background: rgb(255, 196, 196);
-        border-radius:10px;
-    }
-    </style>
 
-    <div class="media text-muted pt-3" id="auctionLink">
-        <img src="http://www.zmien-kolor-auta.eu/wp-content/uploads/2015/09/wrapcar-bmw-series-7-9-128x128.jpg" alt="4040" style="height:45px;width:45px;"class="mr-2 rounded">
-        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-            <strong class="d-block text-gray-dark"><%= title %></strong>
-            <%= description %><br><br>
-        </p>
-        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-            <en style="padding:3px;border-radius:5px; background: paleturquoise;"><%= price %>$</en><br><br>
-            <en style="padding:3px;border-radius:5px; background:lightsteelblue;"><%= timeToEnd %></en>
-        </p>
-        <p class="media text-muted pt-3">
-        <% if(isBuyNow) { %>
-            <p style="background: greenyellow;padding:3px;border-radius:5px;">
-                Buy now
-            </p> 
-        <% } else { %>
-            <p style="background: orange;padding:3px;border-radius:5px;">
-                &nbsp;Auction&nbsp;
-            </p> 
-        <% } %>
-        </p>
-        
-           
-        
-</div>
+  
+  <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top"  src="<%= photo = auction.photo %>" alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text"><%= title %></p>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="auction/<%= id %>">
+                    <div class="btn-group">
+                        <p type="button" class="btn btn-sm btn-outline-secondary"><%= price %>$</p>
+                        
+                        <p type="button" class="btn btn-sm btn-outline-secondary">
+                            <% if(isBuyNow) { %>
+                                Buy now
+                            <% } else { %>
+                                Bid
+                            <% } %>
+                        </p>
+                    </div>
+                </a>
+                <small class="text-muted">Days left:<%= moment(timeToEnd).format('D'); %></small>
+            </div>
+          </div>
+        </div>
+      </div>

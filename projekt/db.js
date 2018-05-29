@@ -1,7 +1,6 @@
-module.exports = {
-    'url' : 'mongodb://<dbuser>:<dbpassword>@novus.modulusmongo.net:27017/<dbName>'
-}
+require('./models/auction');
 
 module.exports = {
-    'url' : 'mongodb://localhost/passport'
+    'url' : 'mongodb://localhost/myDB'
 }
+

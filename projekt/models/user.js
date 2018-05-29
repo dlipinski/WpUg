@@ -1,4 +1,4 @@
-const User = require('../models/auction.js')
+const Auction = require('../models/auction.js');
 const mongoose = require('mongoose'), Schema = mongoose.Schema;
  
 const UserSchema = mongoose.Schema({

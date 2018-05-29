@@ -5,6 +5,7 @@
     <head>
         <% include ../partials/head %>
         <link href="/css/auctions.css" rel="stylesheet">
+        <link href="/css/album.css" rel="stylesheet">
     </head>
     <body class="bg-light">
 
@@ -12,19 +13,19 @@
             <% include ../partials/header %>
         </header>
 
-   
-        <main role="main" class="container">
-            <div class="my-3 p-3 bg-white rounded box-shadow">
-                <h6 class="border-bottom border-gray pb-2 mb-0">Recent auctions</h6>
-
-                <%- include('../partials/auctionLink', {auction: {id: 1,isBuyNow: false,title: 'Car', description: 'good car', price: '20.00',end: '2018.02.02 12:12:12'}}); %>
-                <%- include('../partials/auctionLink', {auction: {id: 1,isBuyNow:true,title: 'Car', description: 'good car', price: '20.00',end: '2018.02.02 12:12:12'}}); %>
-
-                <small class="d-block text-right mt-3">
-                    <a href="#">All updates</a>
-                </small>
-            </div>
-        </main>
+        <main role="main">
+       
+                <div class="album py-5 bg-light">
+                    <div class="container">
+                        <div class="row">
+                            <% auctions.forEach( (auction) => { %>
+                                <%- include('../partials/auctionLink', {auction}); %>
+                            <% }); %>
+                        </div>
+                    </div>
+                </div>
+           
+            </main>
           
         
         <footer>

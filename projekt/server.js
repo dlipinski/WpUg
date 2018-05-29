@@ -61,8 +61,9 @@ app.use(express.static('public'));
 
 // routing („normalnie” powinien wykorzystywać szablony, np. EJS)
 var routes = require('./routes/index')(passport);
+var auction_routes = require('./routes/auctionRoutes')(passport);
 app.use('/', routes);
-
+app.use('/', auction_routes);
 // serwer HTTP dla aplikacji „app”
 const server = require('http').createServer(app);
 

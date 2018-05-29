@@ -1,4 +1,4 @@
-const User = require('../models/user.js')
+const User = require('../models/user.js');
 const mongoose = require('mongoose'), Schema = mongoose.Schema;
 
 const AuctionSchema = mongoose.Schema({
@@ -10,6 +10,7 @@ const AuctionSchema = mongoose.Schema({
     price: Number,
     startDate: { type: Date, default: Date.now },
     endDate:  { type: Date, default: Date.now },
+    ended:  { type: Boolean, default: false },
     auctioneers: [{type: Schema.Types.ObjectId, ref: 'User'}]
 })
 
