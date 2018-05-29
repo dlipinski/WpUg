@@ -1,0 +1,27 @@
+<!-- views/pages/login.ejs -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include ../partials/head %>
+        <!-- Custom styles for this template -->
+        <link href="/css/signin.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <% include ../partials/header %>
+        </header>
+        <main role="main" class="container">
+                <div class="form-signin" >
+                        <h1 class="h3 mb-3 font-weight-normal">Your data</h1>
+                        <h5>Username: <%= user.username %></h5>
+                        <h5>Email: <%= user.email %></h5>
+                        <h5>Name: <%= user.username %> <%= user.username %></h5>
+                </div>
+                
+        </main>
+        <footer>
+            <% include ../partials/footer %>
+        </footer>
+    </body>
+</html>

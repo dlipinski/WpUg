@@ -1,0 +1,24 @@
+<!-- views/partials/message.ejs -->
+
+<% if(message!= '') {%>
+<style>
+    #errorContainer{
+        position:absolute;
+        left: 50%; 
+    }
+    #error{
+        position: relative; left: -50%;
+        padding: 10px;
+        display:inline-block;
+        left:10;
+        border:1px solid rgb(250, 58, 58);
+        border-radius:10px;
+        background: rgb(255, 112, 112);
+    }
+</style>
+<div id="errorContainer">
+        <div id="error">
+            <%= message %>
+</div>
+
+<% } %>

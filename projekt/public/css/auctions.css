@@ -1,0 +1,17 @@
+.container{
+    padding-top:50px;
+}
+.auction{
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+.left{
+    width: 20%;
+    background: yellow;
+    display: inline-block;
+}
+.right{
+    width:75%;
+    background: green;
+    display: inline-block;
+}
