@@ -16,6 +16,8 @@ module.exports = function(passport){
 	/* GET new auction Page */
 	router.get('/auction/:id', auction_controller.auction_detail);
 
+	/* GET new auction Page */
+	router.get('/myAuctions', isAuthenticated,auction_controller.auction_list_user);
 
 	/* GET new auction Page */
 	router.get('/newAuction',isAuthenticated, auction_controller.auction_create_get);

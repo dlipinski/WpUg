@@ -40,15 +40,11 @@ module.exports = function(passport){
 	});
 
 	/* Handle Logout */
-	router.get('/signout', function(req, res) {
+	router.get('/signout', isAuthenticated, function(req, res) {
 		req.logout();
 		res.redirect('/');
 	});
-
 	
-
-
-
 	return router;
 }
 

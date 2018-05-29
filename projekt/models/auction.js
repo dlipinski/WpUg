@@ -2,7 +2,7 @@ const User = require('../models/user.js');
 const mongoose = require('mongoose'), Schema = mongoose.Schema;
 
 const AuctionSchema = mongoose.Schema({
-    createtor: String,
+    createtor: {type: Schema.Types.ObjectId, ref: 'User'},
     isBuyNow: Boolean,
     title: String,
     description: String,
