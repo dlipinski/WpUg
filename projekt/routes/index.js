@@ -45,6 +45,12 @@ module.exports = function(passport){
 		res.redirect('/');
 	});
 	
+	router.get('/chats', /*isAuthenticated,*/ function(req, res) {
+		res.render('pages/chats', {user: req.user});
+	});
+	router.get('/chat',/* isAuthenticated, */function(req, res) {
+		res.render('pages/chat', {user: req.user});
+	});
 	return router;
 }
 
@@ -55,5 +61,5 @@ const isAuthenticated = function (req, res, next) {
 	if (req.isAuthenticated())
 		return next();
 	// if the user is not authenticated then redirect him to the login page
-	res.redirect('/');
+	res.redirect('/login');
 }

@@ -1,0 +1,31 @@
+
+
+<style>
+#chatMessage{
+    background: lightblue;
+    display: block;
+}
+#chatLink{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+</style>
+
+<% if(message.From != user_id) { %>
+
+<div class="media text-muted pt-3" id="chatMessage" 
+style="min-width:51%;max-width:70%;background: lightblue;padding-left:10px;padding-right:10px;border-radius:30px 30px 5px 30px;float:right">
+
+<% } else { %>
+
+<div class="media text-muted pt-3" id="chatMessage" 
+
+style="min-width:51%;max-width:70%;background: lightgreen;padding-left:10px;padding-right:10px;border-radius:30px 30px 30px 5px;float:left">
+
+<% } %>
+<p style="display:none;text-align: center;background: white; border-radius:20px;"><%= message.Date %></p>
+    <p style="text-align: justify;" class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+    <%= message %>
+    </p>
+</div>

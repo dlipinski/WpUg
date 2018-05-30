@@ -1,7 +1,7 @@
-
+//jshint browser: true, esversion: 6, node: true
 const Auction = require('../models/auction.js');
 const User = require('../models/user.js');
-var moment = require('moment');
+const moment = require('moment');
 
 // Display list of all Auction.
 exports.auction_list = (req, res) => {
@@ -23,8 +23,7 @@ exports.auction_list_recent = function(req, res) {
 };
 // Display list of all Auction.
 exports.auction_list_find = function(req, res) {
-	let regex = RegExp(`/.*${req.body.phrase}.*/ `);
-	var query = { title: new RegExp('^' + req.body.phrase) };
+	var query = { title: {$regex : `.*${req.body.phrase}.*`}};
 	Auction.find(query)
 	.sort({'dateEnd': -1})
 	.limit(100)
@@ -45,12 +44,18 @@ exports.auction_list_user = function(req, res) {
 };
 // Display detail page for a specific Auction.
 exports.auction_detail = function(req, res) {
-	var query = { _id: req.params.id };
-	Auction.findOne(query)
-    .exec(function (err, auction) {
-		if (err) {/* return next(err);*/ }
-		res.render('pages/auction', { auction: auction,message: req.flash('message') ,  moment: moment});
+	let userQuery = { "auctions": req.params.id};
+	let auctionQuery = { _id: req.params.id };
+	User.findOne(userQuery)
+	.exec(function (err, user) {
+		Auction.findOne(auctionQuery)
+		.exec(function (err, auction) {
+			if (err) {/* return next(err);*/ }
+			res.render('pages/auction', { auction: auction,user:user,message: req.flash('message') ,  moment: moment});
+		});
 	});
+	
+	
 };
 
 // Display Auction create form on GET.

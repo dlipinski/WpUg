@@ -55,15 +55,17 @@ app.use(session({
     saveUninitialized: true,
 }));
 
-
+        
 // obsługa zasobów statycznych
 app.use(express.static('public'));
 
 // routing („normalnie” powinien wykorzystywać szablony, np. EJS)
 var routes = require('./routes/index')(passport);
 var auction_routes = require('./routes/auctionRoutes')(passport);
+var chat_routes = require('./routes/chatRoutes')(passport);
 app.use('/', routes);
 app.use('/', auction_routes);
+app.use('/', chat_routes);
 // serwer HTTP dla aplikacji „app”
 const server = require('http').createServer(app);
 

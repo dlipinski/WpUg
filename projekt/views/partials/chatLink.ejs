@@ -1,0 +1,21 @@
+
+
+<style>
+#chat:hover{
+    background: lightblue;
+}
+#chatLink{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+</style>
+<a href="#" id="chatLink">
+<div class="media text-muted pt-3" id="chat">
+    <img src="" alt="" class="mr-2 rounded">
+    <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+        <strong class="d-block text-gray-dark"><% removeA(chat.users,req.user)[0].name; %></strong>
+        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+    </p>
+</div>
+</a>

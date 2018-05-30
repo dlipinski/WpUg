@@ -43,9 +43,12 @@
                                         <input style="font-size:20px;" type="button" class="btn btn-sm btn-outline-secondary" value="Make bid offer">
                                     <% } %>
                                     <br><br>
-                                    <a href="#">
-                                        <p >Contact seller</p>
-                                    </a>
+                                    <form action="/chat" method="POST">
+                                        <input style="display:none" name="user_id" value="<%= user._id %>">
+                                        <input style="display:none" name="title" value="<%= auction.title %>">
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary" > Contact <%= user.firstName %></button>
+                                    </form>
+                                    
                                         
                                    
                                 </section>                          
