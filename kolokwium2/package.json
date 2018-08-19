@@ -12,7 +12,12 @@
     "pack-zip": "^0.2.2"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect": "^3.6.6",
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.3",
-    "socket-io": "^1.0.0"
+    "path": "^0.12.7",
+    "socket-io": "^1.0.0",
+    "socket.io": "^2.1.1"
   }
 }

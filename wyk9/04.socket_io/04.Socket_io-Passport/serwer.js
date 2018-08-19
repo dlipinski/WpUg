@@ -82,23 +82,7 @@ app.get('/', (req, res) => {
 });
 app.get('/login', (req, res) => {
     var body = `
-    <html>
-    <body>
-        <form action="/login" method="post">
-            <div>
-                <label>Użytkownik:</label>
-                <input type="text" name="username"/>
-            </div>
-            <div>
-                <label>Hasło:</label>
-                <input type="password" name="password"/>
-            </div>
-            <div>
-                <input type="submit" value="Zaloguj"/>
-            </div>
-        </form>
-    </body>
-    </html>`;
+  `;
     res.send(body);
 });
 app.post('/login',
